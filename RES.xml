@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
+  Name="RES Remote" Icon="Reddit_logo.png" Author="burntcookie90" Description="Controls reddit using Reddit Enhancement Suite">
+  
+  <Actions>
+	<Action Name="Down">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_J</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Up">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_K</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Upvote">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_A</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Downvote">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_Z</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Link">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_L</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Hide">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_H</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Comments">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_C</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Comments_Tab">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>LSHIFT</Extra>
+			<Extra>VK_C</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="Expand">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>VK_X</Extra>
+		</ActionRef>
+	</Action>
+  </Actions>
+  
+  <Layout Scroll="none">
+	<Row>
+		<Button Text="Up One Post" OnClick="Up"/>
+		<Button Text="Down One Post" OnClick="Down"/>
+	</Row>
+	<Row>
+		<Button Text="Expand Post" OnClick="Expand"/>
+		<Button Text="Hide Post" OnClick="Hide"/>
+	</Row>
+	<Row>
+		<Button Text="Upvote" OnClick="Upvote"/>
+		<Button Text="Downvote" OnClick="Downvote"/>
+	</Row>
+	<Row>
+		<Button Text="Open Link and Comments" OnClick="Link"/>
+		<Button Text="Open Comments" OnClick="Comments"/>
+		<Button Text="Open Comments in New Tab" OnClick="Comments_Tab"/>
+	</Row>
+  </Layout>
+  
+</ur:Remote>
