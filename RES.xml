@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ur:Remote xmlns:ur="http://unifiedremote.com/schemas/remote.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://unifiedremote.com/schemas/remote.xsd http://unifiedremote.com/schemas/remote.xsd"
-  Name="RES Remote" Icon="Reddit_logo.png" Author="burntcookie90" Description="Controls reddit using Reddit Enhancement Suite">
+  Name="RES Remote" Icon="Reddit_logo.png" Author="burntcookie90" Description="Controls reddit using RES">
   
   <Actions>
 	<Action Name="Down">
@@ -13,7 +13,7 @@
 			<Extra>VK_K</Extra>
 		</ActionRef>
 	</Action>
-	<Action Name="Upvote">
+	<Action Name="Upvote">	
 		<ActionRef Name="Stroke" Target="Core.Input">
 			<Extra>VK_A</Extra>
 		</ActionRef>
@@ -49,25 +49,46 @@
 			<Extra>VK_X</Extra>
 		</ActionRef>
 	</Action>
+	<Action Name="ToggleImages">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>LSHIFT</Extra>
+			<Extra>VK_X</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="GalleryPrev">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>OEM_4</Extra>
+		</ActionRef>
+	</Action>
+	<Action Name="GalleryNext">
+		<ActionRef Name="Stroke" Target="Core.Input">
+			<Extra>OEM_6</Extra>
+		</ActionRef>
+	</Action>
   </Actions>
   
   <Layout Scroll="none">
 	<Row>
-		<Button Text="Up One Post" OnClick="Up"/>
-		<Button Text="Down One Post" OnClick="Down"/>
+		<Button Icon="UP" OnClick="Up"/>
+		<Button Icon="DOWN" OnClick="Down"/>
 	</Row>
 	<Row>
 		<Button Text="Expand Post" OnClick="Expand"/>
 		<Button Text="Hide Post" OnClick="Hide"/>
 	</Row>
 	<Row>
-		<Button Text="Upvote" OnClick="Upvote"/>
-		<Button Text="Downvote" OnClick="Downvote"/>
+		<Button Icon="THUMBS_UP" OnClick="Upvote"/>
+		<Button Icon="THUMBS_DOWN" OnClick="Downvote"/>
 	</Row>
 	<Row>
 		<Button Text="Open Link and Comments" OnClick="Link"/>
 		<Button Text="Open Comments" OnClick="Comments"/>
 		<Button Text="Open Comments in New Tab" OnClick="Comments_Tab"/>
+	</Row>
+	<Row>
+		<Button Text="Previous in gallery" OnClick="GalleryPrev"/>
+		<Button Text="Toggle Images" OnClick="ToggleImages"/>
+		<Button Text="Next in gallery" OnClick="GalleryNext"/>
 	</Row>
   </Layout>
   
